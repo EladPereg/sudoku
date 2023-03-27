@@ -71,12 +71,13 @@ function signInFunc() {
     if (userFlag == true && passFlag == true) {
         signInDiv.style.display = 'none';
         dif.style.display = 'block';
+        let chooseDif = document.getElementById('chooseDif')
+        let h1 = document.createElement('h1')
+        h1.innerHTML = 'Please choose the difficulty level you would like to play'
+        chooseDif.appendChild(h1)
     }
 
-    let chooseDif=document.getElementById('chooseDif')
-    let h1=document.createElement('h1')
-    h1.innerHTML='Please choose the difficulty level you would like to play'
-    chooseDif.appendChild(h1)
+
 }
 function chooseBoard(num) {
     let choise = Math.ceil(Math.random() * 3);
@@ -91,7 +92,7 @@ function chooseBoard(num) {
     }
     let dif = document.getElementById('difficulty');
     dif.style.display = "none";
-    let chooseDif=document.getElementById('chooseDif')
+    let chooseDif = document.getElementById('chooseDif')
     chooseDif.style.display = "none";
 
 
@@ -178,10 +179,10 @@ function isBoardValid() {
     let neg = false;
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
-            if (document.getElementById(`inp${i}${j}`).value == '') {               
+            if (document.getElementById(`inp${i}${j}`).value == '') {
                 filled = true;
             }
-            if (document.getElementById(`inp${i}${j}`).value < 1) {                   
+            if (document.getElementById(`inp${i}${j}`).value < 1) {
                 neg = true;
             }
         }
