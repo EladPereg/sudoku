@@ -94,7 +94,10 @@ function chooseBoard(num) {
     dif.style.display = "none";
     let chooseDif = document.getElementById('chooseDif')
     chooseDif.style.display = "none";
-
+    let backGroundSong = document.getElementById('backGroundSong')
+    backGroundSong.style.display = 'block'
+    let h3Song=document.getElementById('h3Song')
+    h3Song.style.display='block'
 
 }
 function createBoard(num, board) {
